@@ -18,8 +18,7 @@ class Dog {
   }
   */
 
-  //생성자에 : 를 써서 필드를 초기화해주는데 Dart에서 이 방법을
-  //초기화 리스트라고 한다.
+  //생성자에 콜론(:) 을 써서 필드를 초기화해주는데 Dart에서 이 방법을 초기화 리스트라고 한다.
   //간단한 연산자로는 삼항연산자 혹은 null 병합 연산자(대체 연산자)  A ?? B 정도는 사용할 수 있다.
   Dog(String name, int age, String color, int thirsty)
       : this.name = name,
