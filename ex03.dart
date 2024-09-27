@@ -11,6 +11,10 @@ void main() {
   //Dart는 모든 것이 객체이다. 그래서 내부에 기능이 있는데 이중 모든 객체에서 사용 가능한 runtimeType이라는 기능이 있다.
   //runtimeType : int형 double형 var, dynamic, List<int> 등 가장 구체적인 타입을 확인할 수 있다
 
+  // 매개변수에서는 타입을 생략하면 dynamic으로 타입추론을 한다.
+  // 함수의 리턴 타입을 생략하면 dynamic이 리턴 타입이 된다.
+  // 지역변수에서는 타입을 생략하면 var로 타입추론을 한다.
+
   var n1 = 1;
   var d1 = 10.1;
   var b1 = true;

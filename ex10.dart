@@ -20,4 +20,5 @@ class CheeseBurger extends Burger {
 
 void main() {
   Burger b1 = CheeseBurger("치즈버거");
+  print(b1);
 }

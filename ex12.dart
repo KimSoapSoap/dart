@@ -38,6 +38,8 @@ void main() {
 }
 */
 
+//mixin과 with
+
 mixin class Engine {
   int power = 5000;
 }
@@ -46,10 +48,11 @@ mixin class Wheel {
   int count = 4;
 }
 
+//mixin 클래스를 with를 사용해서 해당 클래스의 정보를 가져다 쓴다.(여러 개 가능)
 class Sonata with Engine, Wheel {}
 
 void main() {
-  //생성자 주입. new를 사용하지 않고 객체를 생성해서 전달
+  //with를 사용해서 mixin 클래스를 연결하면 마치 본인 것처럼 사용할 수 있다.
   Sonata s = Sonata();
   print(s.power);
   print(s.count);
