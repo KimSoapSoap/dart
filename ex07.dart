@@ -10,6 +10,7 @@ class Dog {
 즉 생성자의 중괄호 내부에서 null이 아님을 보장할 수 없기 때문에 생성자에 중괄호 지원x
 중괄호 대신 콜론 (:)을 붙여 준다. -> 이때는 필드 초기화 구문을 콤마로 이어주고 끝에 세미콜론(;)
 다른 방법으로는 필드에 late를 붙이거나 타입 뒤에 ?를 붙여주면 되긴 한다.
+자바에서 보던것과 같은 이런 매개변수를 positional parameter 라고 한다.
   Dog(String name, int age, String color, int thirsty) {
     this.name = name;
     this.age = age;
