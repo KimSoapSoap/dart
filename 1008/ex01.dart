@@ -1,0 +1,20 @@
+Future<int> getNum() {
+  // Future의 delayed에 Duration객체에 3초를 설정해줬다. 통신 없이 3초 지연을 설정하고 통신을 해서 3초 뒤에 받는다고 가정.
+  // 이 Future.delayed를 받은 Furture<int>는 3초 뒤 실행이라는 어음을 가지고 있다.
+  // 그렇기 때문에 이 어음을 처리하려면 처리하는 쪽에서 async(함수의 소괄호와 중괄호 사이) await(함수 앞)를 가지고 처리하면 된다.
+  // 처리하는 쪽에서 처리한다는 게 무슨 의미냐면 아래 void start(){~}에서 받으면 void start(){~}에 async, 값을 넣는 int n = getNum()쪽에 await붙임
+  // 이러면 main() 에서 start()를 실행하고 print('안녕')을 해두면 비동기로 처리돼서 안녕이 먼저 출력되고 3초 뒤에 1 + 10이 출력된다.
+  // main에서 start();와 print('안녕');을 동기적으로 처리하려면 어떻게 해줘야 할까? -> ex02
+  Future<int> fNum = Future.delayed(Duration(seconds: 3), () => 1);
+  return fNum;
+}
+
+void start() async {
+  int n = await getNum();
+  print(n + 10);
+}
+
+void main() async {
+  start();
+  print('안녕');
+}
