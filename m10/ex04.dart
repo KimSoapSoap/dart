@@ -17,7 +17,6 @@ class Post {
 }
 
 //모든 통신의 기본은 본인 오브젝트로 바꿔줘야 한다.
-
 void main() {
   Post post = Post.fromMap(map);
   print(post.id);
