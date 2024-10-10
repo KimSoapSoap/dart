@@ -52,5 +52,14 @@ String whoIsHe(Person4 person4) => switch (person4) {
       _ => '나머지',
     };
 
-
 //mixin 클래스
+//mixin은 extends나 with를 사용할 수 없다. 그렇기 때문에 mixin class도 마찬가지로 extends나 with사용이 불가능하다.
+//클래스는 on 키워드를 사용할 수 없다. 그렇기 때문에 mixin class도 on키워드를 사용할 수 없다.
+// 즉 mixin과 class에서 안 되는 것은 mixin 클래스에서도 안 된다는 것
+mixin class AnimalMixin {
+  String bark() {
+    return '멍멍';
+  }
+}
+
+class Dog with AnimalMixin {}
